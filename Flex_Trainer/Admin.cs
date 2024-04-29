@@ -21,11 +21,15 @@ namespace Flex_Trainer
         public string lastname { get; set; }
         public string contactNo { get; set; }
         public string gender { get; set; }
-        public Admin()
+        public string email { get; set; }
+
+        Form1 mainForm { get; set; }
+        public Admin(Form1 A)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Load += Admin_Load;
+            mainForm = A;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -35,11 +39,20 @@ namespace Flex_Trainer
         private void Admin_Load(object sender, EventArgs e)
         {
             username_link.Text = username;
+            drop_down.Visible = false;
+
+            string query = "select * from account where username = '" + username + "'";
+            DataTable dt = database.search_to_check(query);
+            email = dt.Rows[0][2].ToString();
+            query = "select * from admin where username = '" + username + "'";
+            dt = database.search_to_check(query);
+            gender = dt.Rows[0][5].ToString();
         }
 
         private void admin_tab_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(admin_tab.SelectedIndex == 1)
+            drop_down.Visible = false;
+            if (admin_tab.SelectedIndex == 1)
             {
                 if(check)
                 {
@@ -98,6 +111,14 @@ namespace Flex_Trainer
                     flow_remove_gym.Controls.Add(remove);
                 }
             }
+            else if(admin_tab.SelectedIndex == 4)
+            {
+                edit_name.Text = firstname + " " + lastname;
+                email_txt.PlaceholderText = email;
+                edit_gender.PlaceholderText = gender;
+                edit_phone.PlaceholderText = contactNo;
+                edit_username.PlaceholderText = username;
+            }
 
         }
 
@@ -138,6 +159,7 @@ namespace Flex_Trainer
 
         private void declineRequest(object sender, EventArgs e)
         {
+            drop_down.Visible = false;
             requestDiv user = (requestDiv)sender;
             string query3 = "delete from gym_owner_request where member_id = '" + user.get_set_userid + "'";
             database.query_data(query3);
@@ -146,6 +168,7 @@ namespace Flex_Trainer
 
         private void removeGym(object sender, EventArgs e)
         {
+            drop_down.Visible = false;
             removeDiv user = (removeDiv)sender;
 
             string query = "select * from trainer where gym_id = '" + user.get_set_gymid + "'";
@@ -216,5 +239,34 @@ namespace Flex_Trainer
 
             flow_remove_gym.Controls.Remove(user);
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            drop_down.Show();
+        }
+
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            Rectangle tabBounds = admin_tab.Bounds;
+
+            drop_down.Visible = false;
+        }
+
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainForm.Show();
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            admin_tab.SelectedIndex = 4;
+        }
     }
+
+            
+
 }

@@ -14,9 +14,9 @@ namespace Flex_Trainer.Classes
     internal class DB_Access
     {
         //Hussnain
-        //public string ConnectionString = "Data Source=DESKTOP-PFP9UIG\\SQLEXPRESS;Initial Catalog = project; Integrated Security = True; Encrypt=False";
+        public string ConnectionString = "Data Source=DESKTOP-PFP9UIG\\SQLEXPRESS;Initial Catalog = project; Integrated Security = True; Encrypt=False";
         //Sohaib
-        public string ConnectionString = "Data Source=MARIO-PC\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
+        //public string ConnectionString = "Data Source=MARIO-PC\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
 
         public DataTable search_to_check(string query)
         {
