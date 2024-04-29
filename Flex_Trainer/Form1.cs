@@ -170,6 +170,60 @@ namespace Flex_Trainer
         }
 
 
+        private void password_text_tab2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        private void confirm_password_text_tab2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_text_tab1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            password_text_tab1.UseSystemPasswordChar = true;
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            password_text_tab2.UseSystemPasswordChar = true;
+
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+            confirm_password_text_tab2.UseSystemPasswordChar = true;
+
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         //--------------------------------------------------------------
 
 

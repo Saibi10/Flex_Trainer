@@ -93,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="removeDiv.resx">
       <DependentUpon>removeDiv.cs</DependentUpon>
@@ -113,6 +114,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\eyeClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\eyeOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\VerticalWhiteLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
