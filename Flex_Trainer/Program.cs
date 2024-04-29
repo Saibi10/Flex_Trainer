@@ -16,7 +16,7 @@ namespace Flex_Trainer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin());
+            Application.Run(new Form1());
         }
     }
 }

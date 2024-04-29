@@ -152,7 +152,7 @@ namespace Flex_Trainer
             // 
             this.error_label_tab1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.error_label_tab1.ForeColor = System.Drawing.Color.Red;
-            this.error_label_tab1.Location = new System.Drawing.Point(698, 347);
+            this.error_label_tab1.Location = new System.Drawing.Point(798, 347);
             this.error_label_tab1.Name = "error_label_tab1";
             this.error_label_tab1.Size = new System.Drawing.Size(231, 23);
             this.error_label_tab1.TabIndex = 19;

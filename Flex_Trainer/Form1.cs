@@ -67,7 +67,7 @@ namespace Flex_Trainer
                 dt = database.search_to_check(query2);
                 if (dt.Rows.Count > 0) //user is a  trainer
                 {
-                    Admin adminlogin = new Admin();
+                    Admin adminlogin = new Admin(this);
                     this.Hide();
                     adminlogin.username = dt.Rows[0][1].ToString();
                     adminlogin.firstname = dt.Rows[0][2].ToString();
