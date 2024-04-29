@@ -18,6 +18,7 @@ namespace Flex_Trainer.Classes
         //Sohaib
         public string ConnectionString = "Data Source=MARIO-PC\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True;Encrypt=False";
 
+
         public DataTable search_to_check(string query)
         {
             SqlConnection conn = new SqlConnection(ConnectionString);
